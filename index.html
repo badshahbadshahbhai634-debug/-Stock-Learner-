@@ -1,207 +1,356 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#f7f9ff">
-<title>Join Our Telegram Channel</title>
-<style>
-  :root{
-    --blue: #4f6df5;
-    --violet: #6b5bf0;
-    --ink: #14162b;
-    --muted: #8992a6;
-    --card-line: #eceff5;
-    --bg: #f7f9ff;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html,body{height:100%;}
-  body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-    background:
-      radial-gradient(700px 400px at 50% -5%, rgba(107,91,240,0.10), transparent 60%),
-      var(--bg);
-    min-height:100%;
-    display:flex;
-    justify-content:center;
-    color: var(--ink);
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Learners - Telegram Channel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-  .page{
-    width:100%;
-    max-width:480px;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:48px 28px 110px;
-  }
+        body {
+            background-color: #f3f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
 
-  .logo{
-    width:96px; height:96px;
-    border-radius:26px;
-    background:#fff;
-    display:flex; align-items:center; justify-content:center;
-    box-shadow: 0 20px 40px -14px rgba(79,109,245,0.28);
-    margin-bottom:26px;
-  }
-  .logo img{ width:64px; height:64px; object-fit:contain; }
-  .logo svg{ width:56px; height:56px; }
+        .card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 440px;
+            border-radius: 32px;
+            padding: 40px 28px 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            text-align: center;
+            position: relative;
+        }
 
-  .badge{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    background: #eef1ff;
-    color: #4f5fd6;
-    font-size:13.5px;
-    font-weight:600;
-    padding:8px 18px;
-    border-radius:999px;
-    margin-bottom:24px;
-  }
-  .badge .dot{
-    width:7px; height:7px;
-    border-radius:50%;
-    background: var(--blue);
-  }
+        .logo-box {
+            width: 90px;
+            height: 90px;
+            background: #ffffff;
+            border-radius: 24px;
+            margin: 0 auto 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid #f0f0f0;
+        }
 
-  h1{
-    text-align:center;
-    font-size:38px;
-    font-weight:800;
-    line-height:1.15;
-    letter-spacing:-0.5px;
-    margin-bottom:16px;
-  }
-  h1 .accent{
-    background: linear-gradient(90deg, var(--blue), var(--violet));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+        .logo-box span:first-child {
+            font-weight: 800;
+            font-size: 18px;
+            color: #1a1a1a;
+            line-height: 1;
+            letter-spacing: -0.5px;
+        }
 
-  .sub{
-    text-align:center;
-    font-size:15.5px;
-    line-height:1.6;
-    color: var(--muted);
-    max-width:340px;
-    margin-bottom:36px;
-  }
+        .logo-box span:first-child::after {
+            content: '┼';
+            color: #2e7d32;
+            font-size: 12px;
+            position: relative;
+            top: -6px;
+            left: -2px;
+        }
 
-  .redirect-card{
-    width:100%;
-    background:#fff;
-    border:1px solid var(--card-line);
-    border-radius:20px;
-    padding:30px 24px 26px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    box-shadow: 0 24px 48px -30px rgba(20,22,43,0.18);
-    margin-bottom:24px;
-  }
+        .logo-box span:last-child {
+            font-weight: 600;
+            font-size: 13px;
+            color: #2e7d32;
+            line-height: 1;
+            margin-top: 2px;
+        }
 
-  .redirect-title{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:0.6px;
-    color:#5b6478;
-    margin-bottom:22px;
-    text-transform:uppercase;
-  }
-  .redirect-title svg{ width:16px; height:16px; }
+        .badge {
+            display: inline-block;
+            background-color: #e8f2ff;
+            color: #3b82f6;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
 
-  .ring-wrap{
-    position:relative;
-    width:120px; height:120px;
-    margin-bottom:20px;
-  }
-  .ring-wrap svg{ width:120px; height:120px; transform: rotate(-90deg); }
-  .ring-bg{ stroke:#eef0f6; }
-  .ring-fg{
-    stroke: url(#ringGradient);
-    stroke-linecap: round;
-    transition: stroke-dashoffset 1s linear;
-  }
-  .ring-number{
-    position:absolute;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:34px;
-    font-weight:800;
-    color: var(--ink);
-  }
+        .badge::before {
+            content: "•";
+            margin-right: 6px;
+            font-size: 14px;
+        }
 
-  .status-main{
-    font-size:16px;
-    font-weight:700;
-    color: var(--ink);
-    margin-bottom:4px;
-  }
-  .status-sub{
-    font-size:13.5px;
-    color: var(--muted);
-  }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
 
-  .footer-note{
-    font-size:11.5px;
-    color:#b7bdcc;
-    text-align:center;
-  }
+        .title span {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-  .cta-bar{
-    position:fixed;
-    left:0; right:0; bottom:0;
-    display:flex;
-    justify-content:center;
-    padding:16px 20px calc(16px + env(safe-area-inset-bottom));
-    background: linear-gradient(180deg, rgba(247,249,255,0), var(--bg) 40%);
-  }
-  .cta{
-    width:100%;
-    max-width:440px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    padding:17px 18px;
-    background: linear-gradient(90deg, var(--blue), var(--violet));
-    color:#fff;
-    font-size:16px;
-    font-weight:700;
-    letter-spacing:0.3px;
-    border:none;
-    border-radius:14px;
-    cursor:pointer;
-    text-decoration:none;
-    box-shadow: 0 18px 34px -12px rgba(79,109,245,0.55);
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .cta:hover{ transform: translateY(-2px); }
-  .cta:active{ transform: translateY(0); }
-</style>
+        .description {
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            padding: 0 10px;
+        }
+
+        .redirect-box {
+            background: #f8fafc;
+            border: 1px solid #edf2f7;
+            border-radius: 24px;
+            padding: 24px 16px;
+            margin-bottom: 20px;
+        }
+
+        .secure-tag {
+            color: #64748b;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .secure-tag i {
+            color: #3b82f6;
+            font-size: 14px;
+        }
+
+        .timer-circle {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .timer-circle svg {
+            width: 80px;
+            height: 80px;
+            transform: rotate(-90deg);
+        }
+
+        .timer-circle circle {
+            fill: none;
+            stroke-width: 5;
+        }
+
+        .bg-circle {
+            stroke: #e2e8f0;
+        }
+
+        .progress-circle {
+            stroke: url(#gradient);
+            stroke-dasharray: 226;
+            stroke-dashoffset: 0;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 1s linear;
+        }
+
+        .timer-text {
+            position: absolute;
+            font-size: 24px;
+            font-weight: 800;
+            color: #1e293b;
+        }
+
+        .redirect-status {
+            font-size: 13px;
+            font-weight: 700;
+            color: #334155;
+            margin-bottom: 2px;
+        }
+
+        .redirect-subtext {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        .btn-join {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: linear-gradient(90deg, #229ED9 0%, #4c63e6 50%, #6366f1 100%);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 800;
+            padding: 16px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-join:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(59, 130, 246, 0.4);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .feature-card {
+            background: #fafafa;
+            border: 1px solid #f0f0f0;
+            border-radius: 16px;
+            padding: 12px 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            background: #dcfce7;
+            color: #16a34a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+
+        .feature-text {
+            font-size: 10px;
+            font-weight: 700;
+            color: #4b5563;
+        }
+
+        .footer {
+            font-size: 11px;
+            color: #9ca3af;
+        }
+
+        .footer a {
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="page">
-    <div class="logo">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 15l4-6 4 3 5-8" stroke="#22c07a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M14 4h4v4" stroke="#22c07a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+    <div class="card">
+        <div class="logo-box">
+            <span>St<span>o</span>ck</span>
+            <span>Learners</span>
+        </div>
+
+        <div class="badge">Telegram Channel</div>
+
+        <h1 class="title">Stock <span>Learners</span></h1>
+        
+        <p class="description">
+            Get instant updates, exclusive content and the latest information directly on Telegram.
+        </p>
+
+        <div class="redirect-box">
+            <div class="secure-tag">
+                <i class="fa-paper-plane"></i> SECURE REDIRECT
+            </div>
+
+            <div class="timer-circle">
+                <svg>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#3b82f6" />
+                            <stop offset="100%" stop-color="#8b5cf6" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="bg-circle" cx="40" cy="40" r="36"></circle>
+                    <circle class="progress-circle" id="progress" cx="40" cy="40" r="36"></circle>
+                </svg>
+                <div class="timer-text" id="countdown">7</div>
+            </div>
+
+            <div class="redirect-status">Redirecting to Telegram...</div>
+            <div class="redirect-subtext">Please wait a moment</div>
+        </div>
+
+        <a href="https://t.me/+dJ7mL9r0X4U4ZDNl" class="btn-join" id="telegramBtn">
+            <i class="fa-paper-plane"></i> JOIN TELEGRAM
+        </a>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                <div class="feature-text">Fast Access</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="feature-text">Free to Join</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-arrows-up-down"></i></div>
+                <div class="feature-text">Instant Updates</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            © 2026 • All Rights Reserved<br>
+            Landing Page by <a href="#">Snow Ad Agency</a>
+        </div>
     </div>
 
-    <div class="badge">
-      <span class="dot"></span>
-      Telegram Channel
-    </div>
+    <script>
+        const telegramUrl = "https://t.me/+dJ7mL9r0X4U4ZDNl";
+        let timeLeft = 7;
+        const totalTime = 7;
+        
+        const countdownElement = document.getElementById('countdown');
+        const progressCircle = document.getElementById('progress');
+        const circumference = 2 * Math.PI * 36;
 
-    <h1 id="channelName">Stock <span class="accent">Learners</span></h1>
-    <p class="sub">Get instant updates, exclusive content and the latest information directly on Telegram.</p>
+        progressCircle.style.strokeDasharray = circumference;
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+
+            const offset = circumference - (timeLeft / totalTime) * circumference;
+            progressCircle.style.strokeDashoffset = offset;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                window.location.href = telegramUrl;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
